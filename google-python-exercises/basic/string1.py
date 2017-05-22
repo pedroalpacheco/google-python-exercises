@@ -24,8 +24,10 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  # +++your code here+++
-  return
+    if count < 10:
+        return 'Number of donuts: ' + str(count)
+    else:
+        return 'Number of donuts: many'
 
 
 # B. both_ends
@@ -35,7 +37,14 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
   # +++your code here+++
-  return
+  count = len(s)
+  if count < 2:
+      return ''
+  else:
+      inicio = s[:2]
+      fim = s[-2:]
+      junta = inicio+fim
+      return junta
 
 
 # C. fix_start
@@ -49,7 +58,7 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
   # +++your code here+++
-  return
+  return s[0] + s[1:].replace(s[0], '*')
 
 
 # D. MixUp

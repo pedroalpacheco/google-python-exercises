@@ -48,12 +48,15 @@ import sys
 def mimic_dict(filename):
   """Returns mimic dict mapping each word to list of words which follow it."""
   # +++your code here+++
-  return
+  leitura = open(filename,'r')
+  mostra = leitura.readline()
+  return mostra
 
 
 def print_mimic(mimic_dict, word):
   """Given mimic dict and start word, prints 200 random words."""
   # +++your code here+++
+
   return
 
 
