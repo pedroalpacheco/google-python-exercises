@@ -38,7 +38,15 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-  # +++your code here+++
+  #Insere frase numa lista
+  frase = s.split(' ')
+  #Verifica se nomes estão na frase
+  vernot = 'not' in frase
+  verbad = 'bad' in frase
+
+  if vernot == True:
+
+
   return
 
 
