@@ -7,6 +7,8 @@
 # http://code.google.com/edu/languages/google-python-class/
 
 # Additional basic string exercises
+import re
+import math
 
 # D. verbing
 # Given a string, if its length is at least 3,
@@ -28,7 +30,7 @@ def verbing(s):
   return resulta
 
 
-
+#???????????????????????????????????????
 # E. not_bad
 # Given a string, find the first appearance of the
 # substring 'not' and 'bad'. If the 'bad' follows
@@ -38,17 +40,9 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-  #Insere frase numa lista
-  frase = s.split(' ')
-  #Verifica se nomes estão na frase
-  vernot = 'not' in frase
-  verbad = 'bad' in frase
+    return re.sub(r'not.+bad', 'good', s)
 
-  if vernot == True:
-
-
-  return
-
+#???????????????????????????????????????
 
 # F. front_back
 # Consider dividing a string into two halves.
@@ -58,8 +52,11 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-  # +++your code here+++
-  return
+    mid = lambda s: math.ceil(len(s) / 2)
+    front = lambda s: s[:mid(s)]
+    back = lambda s: s[mid(s):]
+
+    return ''.join([front(a), front(b), back(a), back(b)])
 
 
 # Simple provided test() function used in main() to print
